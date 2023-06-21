@@ -1,0 +1,56 @@
+2023-06-21 16:59:29.126 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 15368 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-21 16:59:29.129 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-21 16:59:29.648 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-21 16:59:29.731 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@20576557
+2023-06-21 16:59:29.733 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-21 16:59:29.747 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-21 16:59:29.747 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-21 16:59:29.747 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-21 16:59:29.748 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-21 16:59:29.748 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-21 16:59:29.748 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-21 16:59:29.748 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-21 16:59:29.748 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-21 16:59:29.749 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-21 16:59:29.932 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 1.09 seconds (process running for 1.718)
+2023-06-21 16:59:29.934 [main] INFO  org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner - Running default command line with: []
+2023-06-21 16:59:29.986 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}','time':'{value=1687334280014, type=class java.lang.Long, identifying=true}'}]
+2023-06-21 16:59:30.004 [main] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-21 16:59:30.017 [main] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 12ms
+2023-06-21 16:59:30.027 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}','time':'{value=1687334280014, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 28ms
+2023-06-21 17:00:00.034 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687334400010, type=class java.lang.Long, identifying=true}'}]
+2023-06-21 17:00:00.046 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-21 17:00:00.056 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 9ms
+2023-06-21 17:00:00.062 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687334400010, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 25ms
+2023-06-21 17:00:20.402 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-21 17:00:20.404 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-21 17:04:50.310 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 12308 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-21 17:04:50.313 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-21 17:04:50.843 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-21 17:04:50.928 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@a0db585
+2023-06-21 17:04:50.929 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-21 17:04:50.945 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-21 17:04:50.945 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-21 17:04:50.946 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-21 17:04:50.946 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-21 17:04:50.946 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-21 17:04:50.946 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-21 17:04:50.947 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-21 17:04:50.947 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-21 17:04:50.947 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-21 17:04:51.161 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 1.133 seconds (process running for 1.729)
+2023-06-21 17:04:51.162 [main] INFO  org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner - Running default command line with: []
+2023-06-21 17:04:51.219 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}','time':'{value=1687334640003, type=class java.lang.Long, identifying=true}'}]
+2023-06-21 17:04:51.233 [main] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-21 17:04:51.246 [main] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 11ms
+2023-06-21 17:04:51.256 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}','time':'{value=1687334640003, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 24ms
+2023-06-21 17:05:00.028 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687334700008, type=class java.lang.Long, identifying=true}'}]
+2023-06-21 17:05:00.038 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-21 17:05:00.049 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 9ms
+2023-06-21 17:05:00.058 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687334700008, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 24ms
+2023-06-21 17:06:00.021 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687334760001, type=class java.lang.Long, identifying=true}'}]
+2023-06-21 17:06:00.031 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-21 17:06:00.038 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 7ms
+2023-06-21 17:06:00.044 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687334760001, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 20ms
+2023-06-21 17:06:12.078 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-21 17:06:12.087 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

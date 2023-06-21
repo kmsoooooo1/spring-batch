@@ -17,7 +17,7 @@ public class MyJobScheduler {
     @Autowired
     private Job myJob;
 
-    @Scheduled(cron = "*/5 * * * * *")
+    @Scheduled(cron = "0 * * * * *")
     public void runBatchJob() throws JobExecutionException {
         JobParameters jobParameters = new JobParametersBuilder()
                 .addLong("time", System.currentTimeMillis())
