@@ -12,13 +12,17 @@ import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilde
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
+import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 @Configuration
+@EnableScheduling
 public class batchConfiguration {
     @Bean
     public FlatFileItemReader<Person> reader() {
@@ -49,21 +53,37 @@ public class batchConfiguration {
 
     @Bean
     public Job importUserJob(JobRepository jobRepository, JobCompletionNotificationListener listener, Step step1) {
-        return new JobBuilder("importUserJob", jobRepository)
+//        test-1.
+//        return new JobBuilder("importUserJob", jobRepository)
+//                .incrementer(new RunIdIncrementer())
+//                .listener(listener)
+//                .flow(step1)
+//                .end()
+//                .build();
+
+        return new JobBuilder("printJob", jobRepository)
                 .incrementer(new RunIdIncrementer())
-                .listener(listener)
-                .flow(step1)
-                .end()
+                .start(step1)
                 .build();
     }
 
     @Bean
     public Step step1(JobRepository jobRepository, PlatformTransactionManager transactionManager, JdbcBatchItemWriter<Person> writer) {
+//        test-1.
+//        return new StepBuilder("step1", jobRepository)
+//                .<Person, Person> chunk(10, transactionManager)
+//                .reader(reader())
+//                .processor(processor())
+//                .writer(writer)
+//                .build();
+
         return new StepBuilder("step1", jobRepository)
-                .<Person, Person> chunk(10, transactionManager)
-                .reader(reader())
-                .processor(processor())
-                .writer(writer)
+                .tasklet((contribution, chunkContext) -> {
+                    System.out.println("반복 수행");
+                    return RepeatStatus.FINISHED;
+                }).transactionManager(transactionManager)
                 .build();
     }
+
+
 }
