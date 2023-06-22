@@ -54,3 +54,961 @@
 2023-06-21 17:06:00.044 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687334760001, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 20ms
 2023-06-21 17:06:12.078 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-06-21 17:06:12.087 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:03:32.951 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 10252 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:03:32.956 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:03:34.249 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:03:34.432 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@750ff7d3
+2023-06-22 10:03:34.434 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:03:34.471 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:03:34.473 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:03:34.474 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:03:34.475 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:03:34.476 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:03:34.477 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:03:34.477 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:03:34.478 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:03:34.479 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:03:34.647 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myJobScheduler': Unsatisfied dependency expressed through field 'myJob': No qualifying bean of type 'org.springframework.batch.core.Job' available: expected single matching bean but found 2: importUserJob,printSecond
+2023-06-22 10:03:34.648 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:03:34.662 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:03:34.681 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:03:34.734 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field myJob in com.example.batchprocessing.MyJobScheduler required a single bean, but 2 were found:
+	- importUserJob: defined by method 'importUserJob' in class path resource [com/example/batchprocessing/batchConfiguration.class]
+	- printSecond: defined by method 'printSecond' in class path resource [com/example/batchprocessing/batchConfiguration2.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2023-06-22 10:04:24.312 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 14592 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:04:24.319 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:04:25.423 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:04:25.586 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3f702946
+2023-06-22 10:04:25.588 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:04:25.613 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:04:25.614 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:04:25.615 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:04:25.616 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:04:25.616 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:04:25.617 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:04:25.618 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:04:25.618 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:04:25.619 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:04:26.052 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.32 seconds (process running for 3.644)
+2023-06-22 10:04:26.055 [main] INFO  org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner - Running default command line with: []
+2023-06-22 10:04:26.156 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}','time':'{value=1687334760001, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:04:26.188 [main] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:04:26.206 [main] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:04:26.212 [main] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 21ms
+2023-06-22 10:04:26.227 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}','time':'{value=1687334760001, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 45ms
+2023-06-22 10:05:00.035 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687395900002, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:05:00.058 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:05:00.066 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:05:00.074 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 16ms
+2023-06-22 10:05:00.087 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687395900002, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 45ms
+2023-06-22 10:06:00.039 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687395960011, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:06:00.061 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:06:00.070 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:06:00.078 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 16ms
+2023-06-22 10:06:00.089 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687395960011, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 45ms
+2023-06-22 10:06:05.846 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:06:05.855 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:06:53.128 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 12348 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:06:53.134 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:06:54.190 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:06:54.375 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7cea0110
+2023-06-22 10:06:54.378 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:06:54.413 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:06:54.414 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:06:54.415 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:06:54.416 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:06:54.416 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:06:54.417 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:06:54.418 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:06:54.419 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:06:54.419 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:06:54.591 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myJobScheduler': Unsatisfied dependency expressed through field 'myJob': No qualifying bean of type 'org.springframework.batch.core.Job' available: expected single matching bean but found 2: importUserJob,printSecond
+2023-06-22 10:06:54.593 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:06:54.600 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:06:54.614 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:06:54.656 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field myJob in com.example.batchprocessing.MyJobScheduler required a single bean, but 2 were found:
+	- importUserJob: defined by method 'importUserJob' in class path resource [com/example/batchprocessing/batchConfiguration.class]
+	- printSecond: defined by method 'printSecond' in class path resource [com/example/batchprocessing/batchConfiguration2.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2023-06-22 10:09:52.108 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 4436 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:09:52.115 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:09:53.151 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:09:53.326 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7cea0110
+2023-06-22 10:09:53.328 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:09:53.362 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:09:53.363 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:09:53.364 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:09:53.365 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:09:53.366 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:09:53.368 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:09:53.369 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:09:53.369 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:09:53.370 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:09:53.513 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myJobScheduler': Unsatisfied dependency expressed through field 'myJob': No qualifying bean of type 'org.springframework.batch.core.Job' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier("batchConfiguration")}
+2023-06-22 10:09:53.514 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:09:53.520 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:09:53.533 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:09:53.568 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myJobScheduler': Unsatisfied dependency expressed through field 'myJob': No qualifying bean of type 'org.springframework.batch.core.Job' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier("batchConfiguration")}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at com.example.batchprocessing.BatchProcessingApplication.main(BatchProcessingApplication.java:11) [classes/:?]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.batch.core.Job' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier("batchConfiguration")}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 19 more
+2023-06-22 10:11:19.180 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 8512 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:11:19.185 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:11:20.226 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:11:20.395 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2620e717
+2023-06-22 10:11:20.397 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:11:20.420 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:11:20.421 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:11:20.422 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:11:20.422 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:11:20.422 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:11:20.423 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:11:20.423 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:11:20.423 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:11:20.424 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:11:20.677 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'printSecond' defined in class path resource [com/example/batchprocessing/batchConfiguration2.class]: Unsatisfied dependency expressed through method 'printSecond' parameter 1: Error creating bean with name 'step2' defined in class path resource [com/example/batchprocessing/batchConfiguration2.class]: Failed to instantiate [org.springframework.batch.core.Step]: Factory method 'step2' threw exception with message: java.lang.IllegalStateException: A transaction manager must be provided
+2023-06-22 10:11:20.678 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:11:20.692 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:11:20.708 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:11:20.739 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'printSecond' defined in class path resource [com/example/batchprocessing/batchConfiguration2.class]: Unsatisfied dependency expressed through method 'printSecond' parameter 1: Error creating bean with name 'step2' defined in class path resource [com/example/batchprocessing/batchConfiguration2.class]: Failed to instantiate [org.springframework.batch.core.Step]: Factory method 'step2' threw exception with message: java.lang.IllegalStateException: A transaction manager must be provided
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:550) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at com.example.batchprocessing.BatchProcessingApplication.main(BatchProcessingApplication.java:11) [classes/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'step2' defined in class path resource [com/example/batchprocessing/batchConfiguration2.class]: Failed to instantiate [org.springframework.batch.core.Step]: Factory method 'step2' threw exception with message: java.lang.IllegalStateException: A transaction manager must be provided
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:659) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:647) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 18 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.core.Step]: Factory method 'step2' threw exception with message: java.lang.IllegalStateException: A transaction manager must be provided
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:647) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 18 more
+Caused by: org.springframework.batch.core.step.builder.StepBuilderException: java.lang.IllegalStateException: A transaction manager must be provided
+	at org.springframework.batch.core.step.builder.AbstractTaskletStepBuilder.build(AbstractTaskletStepBuilder.java:126) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at com.example.batchprocessing.batchConfiguration2.step2(batchConfiguration2.java:30) ~[classes/:?]
+	at com.example.batchprocessing.batchConfiguration2$$SpringCGLIB$$0.CGLIB$step2$1(<generated>) ~[classes/:?]
+	at com.example.batchprocessing.batchConfiguration2$$SpringCGLIB$$2.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.0.9.jar:6.0.9]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-6.0.9.jar:6.0.9]
+	at com.example.batchprocessing.batchConfiguration2$$SpringCGLIB$$0.step2(<generated>) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:647) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 18 more
+Caused by: java.lang.IllegalStateException: A transaction manager must be provided
+	at org.springframework.util.Assert.state(Assert.java:76) ~[spring-core-6.0.9.jar:6.0.9]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.afterPropertiesSet(TaskletStep.java:126) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at org.springframework.batch.core.step.builder.AbstractTaskletStepBuilder.build(AbstractTaskletStepBuilder.java:123) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at com.example.batchprocessing.batchConfiguration2.step2(batchConfiguration2.java:30) ~[classes/:?]
+	at com.example.batchprocessing.batchConfiguration2$$SpringCGLIB$$0.CGLIB$step2$1(<generated>) ~[classes/:?]
+	at com.example.batchprocessing.batchConfiguration2$$SpringCGLIB$$2.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.0.9.jar:6.0.9]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-6.0.9.jar:6.0.9]
+	at com.example.batchprocessing.batchConfiguration2$$SpringCGLIB$$0.step2(<generated>) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:647) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 18 more
+2023-06-22 10:12:45.882 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 7016 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:12:45.889 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:12:46.940 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:12:47.119 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7cea0110
+2023-06-22 10:12:47.121 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:12:47.149 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:12:47.151 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:12:47.152 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:12:47.152 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:12:47.153 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:12:47.154 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:12:47.155 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:12:47.155 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:12:47.156 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:12:47.465 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+2023-06-22 10:12:47.467 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:12:47.472 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:12:47.488 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:12:47.511 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:196) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at com.example.batchprocessing.BatchProcessingApplication.main(BatchProcessingApplication.java:11) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Job name must be specified in case of multiple jobs
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.validate(JobLauncherApplicationRunner.java:116) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:369) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:193) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 17 more
+2023-06-22 10:24:46.386 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 13796 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:24:46.391 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:24:47.449 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:24:47.618 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@10823d72
+2023-06-22 10:24:47.620 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:24:47.653 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:24:47.656 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:24:47.657 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:24:47.658 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:24:47.659 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:24:47.660 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:24:47.661 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:24:47.662 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:24:47.663 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:24:47.979 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+2023-06-22 10:24:47.981 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:24:47.987 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:24:48.005 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:24:48.032 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:196) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at com.example.batchprocessing.BatchProcessingApplication.main(BatchProcessingApplication.java:11) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Job name must be specified in case of multiple jobs
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.validate(JobLauncherApplicationRunner.java:116) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:369) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:193) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 17 more
+2023-06-22 10:27:02.382 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 1532 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:27:02.386 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:27:03.391 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:27:03.586 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7c8d5312
+2023-06-22 10:27:03.588 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:27:03.621 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:27:03.623 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:27:03.623 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:27:03.624 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:27:03.625 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:27:03.625 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:27:03.626 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:27:03.626 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:27:03.627 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:27:03.789 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myJobScheduler': Unsatisfied dependency expressed through field 'myJob': No qualifying bean of type 'org.springframework.batch.core.Job' available: expected single matching bean but found 2: importUserJob,printSecond
+2023-06-22 10:27:03.790 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:27:03.806 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:27:03.820 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:27:03.863 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field myJob in com.example.batchprocessing.MyJobScheduler required a single bean, but 2 were found:
+	- importUserJob: defined by method 'importUserJob' in class path resource [com/example/batchprocessing/batchConfiguration.class]
+	- printSecond: defined by method 'printSecond' in class path resource [com/example/batchprocessing/batchConfiguration2.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2023-06-22 10:27:57.495 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 2892 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:27:57.502 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:27:58.521 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:27:58.699 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7636823f
+2023-06-22 10:27:58.702 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:27:58.733 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:27:58.735 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:27:58.736 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:27:58.737 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:27:58.738 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:27:58.738 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:27:58.739 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:27:58.740 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:27:58.740 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:27:59.062 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+2023-06-22 10:27:59.073 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:27:59.078 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:27:59.094 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:27:59.122 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:196) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at com.example.batchprocessing.BatchProcessingApplication.main(BatchProcessingApplication.java:11) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Job name must be specified in case of multiple jobs
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.validate(JobLauncherApplicationRunner.java:116) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:369) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:193) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 17 more
+2023-06-22 10:29:33.851 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 10004 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:29:33.861 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:29:34.355 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 9 ms.
+2023-06-22 10:29:35.057 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:29:35.199 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@421056e5
+2023-06-22 10:29:35.199 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:29:35.215 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:29:35.258 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:29:35.310 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:29:35.326 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:29:35.383 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:29:35.383 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:29:35.490 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.239 seconds (process running for 3.56)
+2023-06-22 10:29:55.726 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:29:55.741 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:30:12.598 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 692 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:30:12.605 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:30:13.060 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 9 ms.
+2023-06-22 10:30:13.759 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:30:13.912 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@421056e5
+2023-06-22 10:30:13.914 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:30:13.932 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:30:13.963 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:30:13.981 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myJobScheduler': Unsatisfied dependency expressed through field 'myJob': No qualifying bean of type 'org.springframework.batch.core.Job' available: expected single matching bean but found 2: importUserJob,printSecond
+2023-06-22 10:30:13.982 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:30:13.987 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:30:14.009 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:30:14.044 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field myJob in com.example.batchprocessing.MyJobScheduler required a single bean, but 2 were found:
+	- importUserJob: defined by method 'importUserJob' in class path resource [com/example/batchprocessing/batchConfiguration.class]
+	- printSecond: defined by method 'printSecond' in class path resource [com/example/batchprocessing/batchConfiguration2.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2023-06-22 10:30:43.934 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 14808 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:30:43.939 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:30:44.381 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 10 ms.
+2023-06-22 10:30:45.096 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:30:45.244 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@26c47874
+2023-06-22 10:30:45.247 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:30:45.263 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:30:45.300 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:30:45.361 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:30:45.374 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:30:45.428 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:30:45.429 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:30:45.567 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.224 seconds (process running for 3.527)
+2023-06-22 10:31:00.080 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687397460004, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:31:00.122 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:31:00.139 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:31:00.146 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 23ms
+2023-06-22 10:31:00.166 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687397460004, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 55ms
+2023-06-22 10:32:00.030 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687397520006, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:32:00.041 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:32:00.048 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:32:00.054 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 12ms
+2023-06-22 10:32:00.063 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687397520006, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 28ms
+2023-06-22 10:32:00.220 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:32:00.230 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:32:07.517 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 2692 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:32:07.523 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:32:07.972 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 11 ms.
+2023-06-22 10:32:07.973 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobRepository already defined in the application context, skipping the registration of a jobRepository
+2023-06-22 10:32:07.973 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobExplorer already defined in the application context, skipping the registration of a jobExplorer
+2023-06-22 10:32:07.973 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobLauncher already defined in the application context, skipping the registration of a jobLauncher
+2023-06-22 10:32:07.973 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobRegistry already defined in the application context, skipping the registration of a jobRegistry
+2023-06-22 10:32:07.973 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobOperator already defined in the application context, skipping the registration of a jobOperator
+2023-06-22 10:32:07.974 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 1 ms.
+2023-06-22 10:32:08.666 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:32:08.812 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@255eaa6b
+2023-06-22 10:32:08.815 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:32:08.831 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:32:08.861 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:32:08.922 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:32:08.935 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:32:08.978 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:32:08.979 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:32:09.087 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.157 seconds (process running for 3.426)
+2023-06-22 10:33:00.099 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687397580004, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:33:00.146 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:33:00.169 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:33:00.181 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 32ms
+2023-06-22 10:33:00.206 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687397580004, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 68ms
+2023-06-22 10:33:10.292 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:33:10.298 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:33:24.338 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 2488 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:33:24.343 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:33:24.778 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 9 ms.
+2023-06-22 10:33:24.780 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobRepository already defined in the application context, skipping the registration of a jobRepository
+2023-06-22 10:33:24.780 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobExplorer already defined in the application context, skipping the registration of a jobExplorer
+2023-06-22 10:33:24.780 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobLauncher already defined in the application context, skipping the registration of a jobLauncher
+2023-06-22 10:33:24.780 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobRegistry already defined in the application context, skipping the registration of a jobRegistry
+2023-06-22 10:33:24.780 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobOperator already defined in the application context, skipping the registration of a jobOperator
+2023-06-22 10:33:24.781 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 0 ms.
+2023-06-22 10:33:25.477 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:33:25.641 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@255eaa6b
+2023-06-22 10:33:25.643 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:33:25.660 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:33:25.700 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:33:25.742 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:33:25.760 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:33:25.815 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:33:25.834 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:33:25.944 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.212 seconds (process running for 3.467)
+2023-06-22 10:34:00.082 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687397640014, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:34:00.112 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step2]
+2023-06-22 10:34:00.128 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step2] executed in 15ms
+2023-06-22 10:34:00.140 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687397640014, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 36ms
+2023-06-22 10:34:12.905 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:34:12.912 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:39:37.596 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 2956 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:39:37.601 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:39:38.090 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 10 ms.
+2023-06-22 10:39:38.091 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobRepository already defined in the application context, skipping the registration of a jobRepository
+2023-06-22 10:39:38.092 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobExplorer already defined in the application context, skipping the registration of a jobExplorer
+2023-06-22 10:39:38.092 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobLauncher already defined in the application context, skipping the registration of a jobLauncher
+2023-06-22 10:39:38.092 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobRegistry already defined in the application context, skipping the registration of a jobRegistry
+2023-06-22 10:39:38.092 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Bean jobOperator already defined in the application context, skipping the registration of a jobOperator
+2023-06-22 10:39:38.093 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 1 ms.
+2023-06-22 10:39:38.883 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:39:39.024 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@476fe690
+2023-06-22 10:39:39.025 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:39:39.039 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:39:39.069 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:39:39.133 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:39:39.146 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:39:39.204 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:39:39.206 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:39:39.366 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.426 seconds (process running for 3.828)
+2023-06-22 10:40:00.116 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398000015, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:40:00.162 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:40:00.182 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:40:00.191 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 27ms
+2023-06-22 10:40:00.213 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398000015, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 63ms
+2023-06-22 10:40:34.661 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:40:34.673 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:41:06.513 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 15012 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:41:06.518 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:41:07.723 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:41:07.908 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@10823d72
+2023-06-22 10:41:07.910 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:41:07.951 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:41:07.953 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:41:07.953 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:41:07.954 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:41:07.955 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:41:07.955 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:41:07.955 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:41:07.956 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:41:07.957 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:41:08.307 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+2023-06-22 10:41:08.309 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:41:08.316 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:41:08.335 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:41:08.362 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:196) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at com.example.batchprocessing.BatchProcessingApplication.main(BatchProcessingApplication.java:11) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Job name must be specified in case of multiple jobs
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.validate(JobLauncherApplicationRunner.java:116) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:369) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:193) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 17 more
+2023-06-22 10:41:37.170 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 11528 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:41:37.178 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:41:37.737 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 11 ms.
+2023-06-22 10:41:38.501 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:41:38.669 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@d109c4f
+2023-06-22 10:41:38.669 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:41:38.696 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:41:38.736 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:41:38.780 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:41:38.801 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:41:38.847 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:41:38.847 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:41:38.982 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.464 seconds (process running for 3.888)
+2023-06-22 10:42:00.100 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=PrintSecond]] launched with the following parameters: [{'time':'{value=1687398120012, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:42:00.146 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step2]
+2023-06-22 10:42:00.170 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step2] executed in 24ms
+2023-06-22 10:42:00.188 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=PrintSecond]] completed with the following parameters: [{'time':'{value=1687398120012, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 50ms
+2023-06-22 10:42:02.460 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:42:02.468 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:42:18.228 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 14724 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:42:18.242 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:42:19.385 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:42:19.606 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@859ea42
+2023-06-22 10:42:19.606 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_instance' already exists
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution' already exists
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_params' already exists
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution' already exists
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_context' already exists
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_context' already exists
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_step_execution_seq' already exists
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_execution_seq' already exists
+2023-06-22 10:42:19.650 [main] WARN  org.mariadb.jdbc.message.server.ErrorPacket - Error: 1050-42S01: Table 'batch_job_seq' already exists
+2023-06-22 10:42:19.953 [main] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+2023-06-22 10:42:19.953 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:42:19.962 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:42:19.985 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-22 10:42:20.012 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jobLauncherApplicationRunner': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:196) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at com.example.batchprocessing.BatchProcessingApplication.main(BatchProcessingApplication.java:11) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Job name must be specified in case of multiple jobs
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.validate(JobLauncherApplicationRunner.java:116) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:369) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:193) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 17 more
+2023-06-22 10:42:40.434 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 16088 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:42:40.439 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:42:40.959 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 8 ms.
+2023-06-22 10:42:41.727 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:42:41.888 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1f7076bc
+2023-06-22 10:42:41.889 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:42:41.909 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:42:41.946 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:42:41.987 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:42:42.002 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:42:42.033 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:42:42.034 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:42:42.141 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.354 seconds (process running for 3.73)
+2023-06-22 10:42:42.157 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:42:42.165 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:43:19.622 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 6392 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:43:19.629 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:43:20.154 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 8 ms.
+2023-06-22 10:43:20.898 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:43:21.053 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2d9dff65
+2023-06-22 10:43:21.055 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:43:21.074 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:43:21.111 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:43:21.149 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:43:21.164 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:43:21.198 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:43:21.199 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:43:21.301 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.292 seconds (process running for 3.677)
+2023-06-22 10:43:21.316 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:43:21.346 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:43:41.334 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 4480 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:43:41.340 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:43:41.940 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 16 ms.
+2023-06-22 10:43:42.778 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:43:42.929 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@421056e5
+2023-06-22 10:43:42.932 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:43:42.957 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:43:42.994 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:43:43.054 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:43:43.068 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:43:43.114 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:43:43.116 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:43:43.290 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.666 seconds (process running for 4.208)
+2023-06-22 10:44:00.078 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=PrintSecond]] launched with the following parameters: [{'time':'{value=1687398240011, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:44:00.112 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step2]
+2023-06-22 10:44:00.137 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step2] executed in 25ms
+2023-06-22 10:44:00.159 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=PrintSecond]] completed with the following parameters: [{'time':'{value=1687398240011, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 55ms
+2023-06-22 10:44:36.001 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:44:36.006 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:45:46.683 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 1528 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:45:46.690 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:45:47.188 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 6 ms.
+2023-06-22 10:45:47.919 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:45:48.110 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@d109c4f
+2023-06-22 10:45:48.114 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:45:48.138 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:45:48.180 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:45:48.229 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:45:48.241 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:45:48.285 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:45:48.286 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:45:48.436 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.404 seconds (process running for 3.771)
+2023-06-22 10:45:50.013 [scheduling-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: The Job must not be null.
+	at org.springframework.util.Assert.notNull(Assert.java:204) ~[spring-core-6.0.9.jar:6.0.9]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:104) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at com.example.batchprocessing.MyJobScheduler.runBatchJob2(MyJobScheduler.java:38) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) [spring-context-6.0.9.jar:6.0.9]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-06-22 10:45:55.004 [scheduling-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: The Job must not be null.
+	at org.springframework.util.Assert.notNull(Assert.java:204) ~[spring-core-6.0.9.jar:6.0.9]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:104) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at com.example.batchprocessing.MyJobScheduler.runBatchJob2(MyJobScheduler.java:38) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) [spring-context-6.0.9.jar:6.0.9]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-06-22 10:46:00.012 [scheduling-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: The Job must not be null.
+	at org.springframework.util.Assert.notNull(Assert.java:204) ~[spring-core-6.0.9.jar:6.0.9]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:104) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at com.example.batchprocessing.MyJobScheduler.runBatchJob2(MyJobScheduler.java:38) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) [spring-context-6.0.9.jar:6.0.9]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-06-22 10:46:00.085 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=PrintSecond]] launched with the following parameters: [{'time':'{value=1687398360015, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:46:00.120 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step2]
+2023-06-22 10:46:00.145 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step2] executed in 24ms
+2023-06-22 10:46:00.167 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=PrintSecond]] completed with the following parameters: [{'time':'{value=1687398360015, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 51ms
+2023-06-22 10:46:05.010 [scheduling-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: The Job must not be null.
+	at org.springframework.util.Assert.notNull(Assert.java:204) ~[spring-core-6.0.9.jar:6.0.9]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:104) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59) ~[spring-batch-core-5.0.2.jar:5.0.2]
+	at com.example.batchprocessing.MyJobScheduler.runBatchJob2(MyJobScheduler.java:38) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) [spring-context-6.0.9.jar:6.0.9]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-06-22 10:46:05.710 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:46:05.717 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-22 10:46:23.828 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Starting BatchProcessingApplication using Java 17.0.2 with PID 13560 (D:\workspace\batch-processing\batch-processing\target\classes started by mongta_user in D:\workspace\batch-processing\batch-processing)
+2023-06-22 10:46:23.834 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-22 10:46:24.275 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchRegistrar - Finished Spring Batch infrastructure beans configuration in 5 ms.
+2023-06-22 10:46:24.943 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-22 10:46:25.105 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@102ecc22
+2023-06-22 10:46:25.107 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-22 10:46:25.128 [main] INFO  org.springframework.batch.core.repository.support.JobRepositoryFactoryBean - No database type set, using meta data indicating: MARIADB
+2023-06-22 10:46:25.159 [main] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+2023-06-22 10:46:25.204 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:46:25.217 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:46:25.229 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:46:25.230 [main] INFO  org.springframework.batch.core.configuration.annotation.BatchObservabilityBeanPostProcessor - No Micrometer observation registry found, defaulting to ObservationRegistry.NOOP
+2023-06-22 10:46:25.371 [main] INFO  com.example.batchprocessing.BatchProcessingApplication - Started BatchProcessingApplication in 2.133 seconds (process running for 3.428)
+2023-06-22 10:46:30.069 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398390010, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:46:30.112 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:46:30.135 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:46:30.142 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 30ms
+2023-06-22 10:46:30.161 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398390010, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 67ms
+2023-06-22 10:46:35.033 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398395011, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:46:35.045 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:46:35.051 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:46:35.059 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 13ms
+2023-06-22 10:46:35.073 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398395011, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 33ms
+2023-06-22 10:46:40.023 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398400000, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:46:40.037 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:46:40.055 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:46:40.060 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 22ms
+2023-06-22 10:46:40.070 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398400000, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 42ms
+2023-06-22 10:46:45.024 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398405010, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:46:45.036 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:46:45.042 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:46:45.047 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 10ms
+2023-06-22 10:46:45.058 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398405010, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 27ms
+2023-06-22 10:46:50.020 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398410011, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:46:50.051 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:46:50.056 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:46:50.061 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 10ms
+2023-06-22 10:46:50.070 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398410011, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 46ms
+2023-06-22 10:46:55.035 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398415014, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:46:55.045 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:46:55.053 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:46:55.059 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 12ms
+2023-06-22 10:46:55.069 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398415014, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 29ms
+2023-06-22 10:47:00.025 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398420002, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:47:00.037 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:47:00.043 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:47:00.049 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 12ms
+2023-06-22 10:47:00.058 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398420002, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 28ms
+2023-06-22 10:47:00.067 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=PrintSecond]] launched with the following parameters: [{'time':'{value=1687398420058, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:47:00.078 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step2]
+2023-06-22 10:47:00.092 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step2] executed in 13ms
+2023-06-22 10:47:00.103 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=PrintSecond]] completed with the following parameters: [{'time':'{value=1687398420058, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 31ms
+2023-06-22 10:47:05.033 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398425012, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:47:05.048 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:47:05.052 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:47:05.057 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 9ms
+2023-06-22 10:47:05.065 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398425012, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 28ms
+2023-06-22 10:47:10.028 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398430009, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:47:10.038 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:47:10.046 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:47:10.051 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 13ms
+2023-06-22 10:47:10.059 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398430009, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 27ms
+2023-06-22 10:47:15.025 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] launched with the following parameters: [{'time':'{value=1687398435006, type=class java.lang.Long, identifying=true}'}]
+2023-06-22 10:47:15.036 [scheduling-1] INFO  org.springframework.batch.core.job.SimpleStepHandler - Executing step: [step1]
+2023-06-22 10:47:15.042 [scheduling-1] INFO  com.example.batchprocessing.batchConfiguration - ---------- 반복수행 로그 출력 ---------------
+2023-06-22 10:47:15.047 [scheduling-1] INFO  org.springframework.batch.core.step.AbstractStep - Step: [step1] executed in 7ms
+2023-06-22 10:47:15.057 [scheduling-1] INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [SimpleJob: [name=printJob]] completed with the following parameters: [{'time':'{value=1687398435006, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 27ms
+2023-06-22 10:47:19.816 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-22 10:47:19.822 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
